@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        min-height: 100vh;
+      }
+
+      @media (max-width: 600px) {
+    /* body {
+      background-color: red;
+    } */
+    navbar ul{
+      flex-direction: column;
+      font-size: 20px;
+    }
+    .container{
+      max-width: 92vw;
+    }
+
+    .name{
+      width: 23vw;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <navbar>
+      <!-- <div class="logo">International currency Convertor</div> -->
+      <ul>
+        <!-- <li><a href="My convertor">My convertor</a></li> -->
+        <li><a href="/">Home</a></li>
+        <li><a href="About Us">About Us</a></li>
+        <li><a href="Contact Us">Contact Us</a></li>
+      </ul>
+    </navbar>
+    <div class="container">
+      <h1>Enter your Currency to Convert</h1>
+      <form action="/action.php" method="post">
+        <label for="number"><b>Choose a number :</b></label>
+        <input type="number" name="quantity" min="1" max="100" />
+        <label for="Currency"><b>Choose a Currency :</b></label>
+        <select name="currency">
+          <option value="INR">India Rupee</option>
+          <option value="USD">US Dollor</option>
+          <option value="AUD">Australian Dollor</option>
+        </select>
+        <button class="btn" value="submit" type="submit">Submit</button>
+        <!-- <input class="btn" type="submit" value="Submit" /> -->
+      </form>
+      <div class="output">
+        <h2>Here your currency is converted</h2>
+        <table>
+          <caption>
+            <i><b>Currency Convertor Output</b></i>
+          </caption>
+          <thead>
+            <tr>
+              <th>Currency</th>
+              <th>Code</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <footer>
+      <b>
+        © 2024-2025, Currency Convertor All right reserved or its affiliates</b
+      >
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
